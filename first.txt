@@ -1,4 +1,5 @@
 I am ujjwal Soni.
 git add.
-git commit -m
+git commit -m "message"
 git log
+git add filename.txt
