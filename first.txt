@@ -1,5 +1,19 @@
 I am ujjwal Soni.
+git init
 git add.
 git commit -m "message"
 git log
 git add filename.txt
+git diff
+git diff --staged
+git rm filename.txt
+git mv fn.txt fn2.txt
+git mv fn.txt NewFolder
+
+git commit -am
+git checkout -- fn.html
+git checkout id -- fn.html   
+git reset HEAD fn.html
+
+git remote add origin https://github.com/ujjwalsoni1707/Machine-Learning.git
+git push -u origin master
