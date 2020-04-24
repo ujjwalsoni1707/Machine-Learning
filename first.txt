@@ -1,1 +1,4 @@
 I am ujjwal Soni.
+git add.
+git commit -m
+git log
