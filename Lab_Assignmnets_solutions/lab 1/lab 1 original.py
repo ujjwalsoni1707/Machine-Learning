@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 27 12:40:00 2019
+
+@author: Ujjwal Soni
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+data=pd.read_csv("a.csv",sep=';')
+print(data.head(2))
+a=['fixed acidity','volatile acidity','citric acid','residual sugar','chlorides','free sulfur dioxide','total sulfur dioxide','density','pH','sulphates','alcohol','quality']
+for i in range(len(a)):
+    print("Mean of",a[i],"is",data[a[i]].mean() )
+    print("Median of",a[i],"is",data[a[i]].median() )
+    print("Mode of",a[i],"is",data[a[i]].mode() )
+    print("Max of",a[i],"is",data[a[i]].max() )
+    print("Min of",a[i],"is",data[a[i]].min() )
+    print("Standard deviation of",a[i],"is",data[a[i]].std() )
+    print("\n")
+'''b=[]
+for i in range(1599):
+    b.append(i)    
+for j in range(len(a)):
+    plt.scatter(b,data[a[j]])
+    plt.xlabel(a[j])
+    plt.show()
+for j in range(len(a)):
+    plt.hist(data[a[j]])
+    plt.xlabel(a[j])
+    plt.show()'''
+for j in range(len(a)):
+    plt.boxplot(data[a[j]])
+    plt.xlabel(a[j])
+    plt.show()
+'''for j in range(len(a)):
+    for i in range(len(a)):
+        print("Pearson correlation coefficient between",a[j],"and",a[i],"is",data[a[j]].corr(data[a[i]]) )
+s=(data.groupby(['quality'])['pH'] )              
+   
+for names, groups in s:
+    print("quality =",names)
+    #print(groups)
+    plt.hist(groups)
+    plt.xlabel("pH")
+    plt.show()'''
